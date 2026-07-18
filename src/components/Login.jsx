@@ -6,6 +6,10 @@ const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 // En az 8 karakter, 1 büyük harf, 1 küçük harf, 1 rakam, 1 özel karakter
 const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&#]{8,}$/;
 
+// Şifre validasyonu: en az 8 karakter, büyük/küçük harf, rakam ve özel karakter
+const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&#]{8,}$/;
+
+
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
