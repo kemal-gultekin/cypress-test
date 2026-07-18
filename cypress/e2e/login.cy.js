@@ -1,6 +1,6 @@
 describe("Login Sayfası", () => {
   beforeEach(() => {
-    cy.visit("http://localhost:5173"); // vite dev server portun neyse
+    cy.visit("http://localhost:3000"); 
   });
 
   it("başarılı form ile submit edip success sayfasına gidebiliyorum", () => {
@@ -41,4 +41,9 @@ describe("Login Sayfası", () => {
     // terms checkbox işaretlenmiyor
     cy.get("button[type='submit']").should("be.disabled");
   });
+
+    it("boş form ile submit denendiginde buton disabled kalir", () => {
+  cy.get("button[type='submit']").should("be.disabled");
+});
+
 });
